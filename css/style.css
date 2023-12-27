@@ -109,6 +109,7 @@ ul {
 .sidebar .links li a.active,
 .sidebar .links li a:hover {
   background-color: #f6f6f6;
+  color: var(--blue-color);
 }
 
 .sidebar .links li a span {
@@ -188,7 +189,7 @@ ul {
   overflow: hidden;
 }
 
-.content h1 {
+.content > h1 {
   margin: 20px 20px 40px;
 }
 .content h1::before,
@@ -668,6 +669,69 @@ ul {
 }
 
 /* end wedgies */
+
+/* start settings */
+
+.settings-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin: 0 10px;
+    gap: 10px;
+  }
+}
+
+.settings-page .site-control .close-message {
+  height: 150px;
+  resize: none;
+  border: 1px #ccc solid;
+}
+
+.settings-page .toggle-checkbox {
+  appearance: none;
+}
+
+.settings-page .toggle-switch {
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ccc;
+  position: relative;
+  transition: 0.3s ease-out;
+}
+
+.settings-page .toggle-switch::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00d";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.3s;
+  color: #ccc;
+}
+
+.settings-page .toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.settings-page .toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 50px;
+}
+
+/* end settings */
 
 /* start animations */
 

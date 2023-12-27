@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- normalize library -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- framwork style file -->
+    <link rel="stylesheet" href="css/framwork.css" />
+    <!-- main style file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar p-relative p-20 bg-white">
+        <h3 class="txt-c p-relative mt-0">OMS<span>agency</span></h3>
+        <ul class="links">
+          <li>
+            <a
+              href="index.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-chart-simple fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="settings.html"
+              class="active p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Profile.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Projects.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-share-nodes fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Courses.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Friends.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-user-group fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Files.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Plans.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- start header -->
+        <header class="f-between p-15 bg-white">
+          <div class="search p-relative">
+            <input
+              class="p-10 rad-10"
+              type="search"
+              placeholder="Type a Keyword"
+            />
+          </div>
+          <div class="icons d-flex align-center">
+            <div class="notifications p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </div>
+            <img src="images/avatar.png" />
+          </div>
+        </header>
+        <!-- end header -->
+        <h1 class="p-relative">Settings</h1>
+        <div class="settings-page m-20 d-grid gap-20">
+          <div class="site-control p-20 bg-white rad-10">
+            <h1 class="m-0 mb-10">Site Control</h1>
+            <p class="mt-0 mb-20 fs-15 c-gray">
+              Control The Website If There Is Maintenance
+            </p>
+            <div class="mb-15 f-between">
+              <div>
+                <span>Website Control</span>
+                <p class="mt-5 mb-0 fs-13 c-gray">
+                  Open/Close Website And Type The Reason
+                </p>
+              </div>
+              <div>
+                <label>
+                  <input type="checkbox" class="toggle-checkbox" />
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <textarea
+              placeholder="Close Message Content"
+              class="close-message rad-6 p-10 w-full"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
