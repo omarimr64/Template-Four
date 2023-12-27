@@ -118,9 +118,10 @@
         </header>
         <!-- end header -->
         <h1 class="p-relative">Settings</h1>
-        <div class="settings-page m-20 d-grid gap-20">
+        <div class="settings-page m-20 d-grid gap-20 pb-20">
+          <!-- start control -->
           <div class="site-control p-20 bg-white rad-10">
-            <h1 class="m-0 mb-10">Site Control</h1>
+            <h2 class="m-0 mb-10">Site Control</h2>
             <p class="mt-0 mb-20 fs-15 c-gray">
               Control The Website If There Is Maintenance
             </p>
@@ -133,16 +134,93 @@
               </div>
               <div>
                 <label>
-                  <input type="checkbox" class="toggle-checkbox" />
+                  <input type="checkbox" class="toggle-checkbox" checked />
                   <div class="toggle-switch"></div>
                 </label>
               </div>
             </div>
             <textarea
               placeholder="Close Message Content"
-              class="close-message rad-6 p-10 w-full"
+              class="close-message rad-6 p-10 w-full mt-10 mb-15"
             ></textarea>
           </div>
+          <!-- end control -->
+          <!-- start general -->
+          <div class="general-info bg-white p-20 rad-10">
+            <h2 class="m-0 mb-10">General Info</h2>
+            <p class="mt-0 mb-20 fs-15 c-gray">
+              General Information About Your Account
+            </p>
+            <form>
+              <label class="mb-15">
+                <span class="c-gray fs-14 mb-10 d-block">First Name</span>
+                <input
+                  type="text"
+                  class="rad-6 p-10 w-full mb-15"
+                  placeholder="First Name"
+                />
+              </label>
+              <label>
+                <span class="c-gray fs-14 mb-10 d-block">Last Name</span>
+                <input
+                  type="text"
+                  class="rad-6 p-10 w-full mb-15"
+                  placeholder="Last Name"
+                />
+              </label>
+              <label>
+                <span class="c-gray fs-14 mb-10 d-block">Email</span>
+                <div class="d-flex align-center mb-20">
+                  <input
+                    type="email"
+                    class="rad-6 p-10 grow"
+                    placeholder="omarimr64@gmail.com"
+                    readonly
+                  />
+                  <a href="#" class="c-blue">Change</a>
+                </div>
+              </label>
+            </form>
+          </div>
+          <!-- end general -->
+          <!-- start security -->
+          <div class="security-info bg-white rad-10 p-20">
+            <h2 class="m-0 mb-10">Security Info</h2>
+            <p class="mt-0 mb-20 fs-15 c-gray">
+              Security Information About Your Account
+            </p>
+            <div class="password f-between">
+              <div class="text">
+                <span>Password</span>
+                <span class="fs-13 c-gray mt-10 d-block"
+                  >Last Change On 25/10/2021</span
+                >
+              </div>
+              <a href="#" class="btn-shape bg-blue c-white fs-15">Change</a>
+            </div>
+            <div class="two f-between">
+              <div class="text">
+                <span>Two-Factor Authentication</span>
+                <span class="fs-13 c-gray mt-10 d-block"
+                  >Enable/Disable The Feature</span
+                >
+              </div>
+              <label>
+                <input type="checkbox" class="toggle-checkbox" checked />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <div class="devices f-between">
+              <div class="text">
+                <span>Devices</span>
+                <span class="fs-13 c-gray mt-10 d-block"
+                  >Check The Login Devices List</span
+                >
+              </div>
+              <a href="#" class="btn-shape bg-eee fs-15 c-black">Devices</a>
+            </div>
+          </div>
+          <!-- end security -->
         </div>
       </div>
     </div>

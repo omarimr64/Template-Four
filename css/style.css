@@ -731,6 +731,25 @@ ul {
   left: 50px;
 }
 
+.settings-page .general-info form div {
+  gap: 10px;
+}
+
+.settings-page .general-info form input {
+  border: 1px #ccc solid;
+}
+
+.settings-page .general-info form input[type="email"] {
+  background-color: #f0f4f8;
+  color: #858585;
+}
+
+.settings-page .security-info > div:not(:last-of-type) {
+  border-bottom: 1px #eee solid;
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+
 /* end settings */
 
 /* start animations */
