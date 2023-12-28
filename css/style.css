@@ -701,6 +701,7 @@ ul {
   background-color: #ccc;
   position: relative;
   transition: 0.3s ease-out;
+  cursor: pointer;
 }
 
 .settings-page .toggle-switch::before {
@@ -748,6 +749,30 @@ ul {
   border-bottom: 1px #eee solid;
   padding-bottom: 30px;
   margin-bottom: 15px;
+}
+
+.settings-page .social-info > div {
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  flex-direction: row-reverse;
+}
+
+.settings-page .social-info > div i {
+  transition: 0.3s;
+  font-size: 17px;
+  flex-basis: 40px;
+  text-align: center;
+}
+
+.settings-page .social-info > div input {
+  border: none;
+  border-left: 1px solid #ddd;
+  background-color: transparent;
+  padding: 12px 10px;
+}
+
+.settings-page .social-info > div input:focus + i {
+  color: black;
 }
 
 /* end settings */
