@@ -678,6 +678,7 @@ ul {
 
 @media (max-width: 767px) {
   .settings-page {
+    padding-bottom: 20px;
     grid-template-columns: minmax(100px, 1fr);
     margin: 0 10px;
     gap: 10px;
@@ -691,7 +692,7 @@ ul {
 }
 
 .settings-page .toggle-checkbox {
-  appearance: none;
+  display: none;
 }
 
 .settings-page .toggle-switch {
@@ -773,6 +774,115 @@ ul {
 
 .settings-page .social-info > div input:focus + i {
   color: black;
+}
+
+.settings-page .widgets > div label {
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.settings-page .widgets > div label::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 2px solid var(--gray-color);
+  left: 0;
+}
+
+.settings-page .widgets > div label::after {
+  position: absolute;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--blue-color);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00c";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 11px;
+  transform: scale(0) rotate(360deg);
+  transition: 0.2s;
+}
+
+.settings-page .widgets > div input:checked + label::before,
+.settings-page .widgets > div label:hover::before {
+  border-color: var(--blue-color);
+}
+
+.settings-page .widgets > div input:checked + label::after {
+  transform: scale(1);
+}
+
+.settings-page .widgets > div input,
+.settings-page .backup > div input {
+  display: none;
+}
+
+.settings-page .backup .time label {
+  padding-left: 30px;
+  position: relative;
+}
+
+.settings-page .backup .time label::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-color);
+  left: 0;
+}
+
+.settings-page .backup > .time label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue-color);
+  transform: scale(0);
+  transition: 0.2s;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.settings-page .backup > .time input:checked + label::after {
+  transform: scale(1);
+}
+
+.settings-page .backup > .time input:checked + label::before {
+  border-color: var(--blue-color);
+}
+
+.settings-page .backup .plan {
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .settings-page .backup .plan {
+    flex-wrap: wrap;
+  }
+}
+
+.settings-page .backup .plan > label {
+  border: 2px solid #eee;
+  cursor: pointer;
+  flex-basis: 100%;
+}
+
+.settings-page .backup .plan input:checked + label {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
 }
 
 /* end settings */

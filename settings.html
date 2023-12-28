@@ -118,7 +118,7 @@
         </header>
         <!-- end header -->
         <h1 class="p-relative">Settings</h1>
-        <div class="settings-page m-20 d-grid gap-20 pb-20">
+        <div class="settings-page m-20 d-grid gap-20">
           <!-- start control -->
           <div class="site-control p-20 bg-white rad-10">
             <h2 class="m-0 mb-10">Site Control</h2>
@@ -259,6 +259,75 @@
             </div>
           </div>
           <!-- end social -->
+          <!-- start widgets -->
+          <div class="widgets p-20 bg-white rad-10">
+            <h2 class="m-0 mb-10">Widgets Control</h2>
+            <p class="mt-0 mb-20 fs-15 c-gray">Show/Hide Widgets</p>
+            <div class="d-flex align-center mb-20">
+              <input type="checkbox" id="draft" checked />
+              <label for="draft">Quick Draft</label>
+            </div>
+            <div class="d-flex align-center mb-20">
+              <input type="checkbox" id="targets" checked />
+              <label for="targets">Yearly Targets</label>
+            </div>
+            <div class="d-flex align-center mb-20">
+              <input type="checkbox" id="statistics" checked />
+              <label for="statistics">Tickets Statistics</label>
+            </div>
+            <div class="d-flex align-center mb-20">
+              <input type="checkbox" id="news" checked />
+              <label for="news">Latest News</label>
+            </div>
+            <div class="d-flex align-center mb-20">
+              <input type="checkbox" id="tasks" />
+              <label for="tasks">Latest Tasks</label>
+            </div>
+            <div class="d-flex align-center">
+              <input type="checkbox" id="items" checked />
+              <label for="items">Top Search Items</label>
+            </div>
+          </div>
+          <!-- end widgets -->
+          <!-- start backup -->
+          <div class="backup p-20 rad-10 bg-white">
+            <h2 class="m-0 mb-10">Backup Manager</h2>
+            <p class="mt-0 mb-20 fs-15 c-gray">
+              Control Backup Time And Location
+            </p>
+            <div class="time">
+              <div class="d-flex align-center mb-20">
+                <input type="radio" id="daily" name="time" checked />
+                <label for="daily">Daily</label>
+              </div>
+              <div class="d-flex align-center mb-20">
+                <input type="radio" id="weekly" name="time" />
+                <label for="weekly">Weekly</label>
+              </div>
+              <div class="d-flex align-center mb-20">
+                <input type="radio" id="monthly" name="time" />
+                <label for="monthly">Monthly</label>
+              </div>
+            </div>
+            <div class="plan d-flex gap-10">
+              <input type="radio" name="plan" id="mega" />
+              <label for="mega" class="p-20 d-flex f-center wrap rad-10 txt-c">
+                <i class="fa-solid fa-server"></i>
+                <span class="d-block w-full mt-10">Megaman</span>
+              </label>
+              <input type="radio" name="plan" id="zero" checked />
+              <label for="zero" class="p-20 d-flex f-center wrap rad-10 txt-c">
+                <i class="fa-solid fa-server"></i>
+                <span class="d-block w-full mt-10">Zero</span>
+              </label>
+              <input type="radio" name="plan" id="sigma" />
+              <label for="sigma" class="p-20 d-flex f-center wrap rad-10 txt-c">
+                <i class="fa-solid fa-server"></i>
+                <span class="d-block w-full mt-10">Sigma</span>
+              </label>
+            </div>
+          </div>
+          <!-- end backup -->
         </div>
       </div>
     </div>
