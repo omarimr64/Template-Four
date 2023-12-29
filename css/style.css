@@ -1047,6 +1047,10 @@ ul {
 }
 
 @media (max-width: 767px) {
+  .profile-page .skills .skill-box {
+    justify-content: center;
+  }
+
   .profile-page .activities .activity-box {
     flex-direction: column;
     text-align: center;
