@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- normalize library -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- framwork style file -->
+    <link rel="stylesheet" href="css/framwork.css" />
+    <!-- main style file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar p-relative p-20 bg-white">
+        <h3 class="txt-c p-relative mt-0">OMS<span>agency</span></h3>
+        <ul class="links">
+          <li>
+            <a
+              href="Dashboard.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-chart-simple fa-fw"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="settings.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Profile.html"
+              class="active p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-user fa-fw"></i>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Projects.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-share-nodes fa-fw"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Courses.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Friends.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-user-group fa-fw"></i>
+              <span>Friends</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Files.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-solid fa-file fa-fw"></i>
+              <span>Files</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="Plans.html"
+              class="p-10 rad-6 fs-14 c-black d-flex align-center"
+            >
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Plans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- start header -->
+        <header class="f-between p-15 bg-white">
+          <div class="search p-relative">
+            <input
+              class="p-10 rad-10"
+              type="search"
+              placeholder="Type a Keyword"
+            />
+          </div>
+          <div class="icons d-flex align-center">
+            <div class="notifications p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </div>
+            <img src="images/avatar.png" />
+          </div>
+        </header>
+        <!-- end header -->
+        <h1 class="p-relative">Profile</h1>
+        <div class="profile-page m-20 d-grid gap-20">
+          <!-- start information -->
+          <div class="bg-white overview d-flex">
+            <div class="avatar f-center d-column">
+              <img src="images/avatar.png" alt="profile photo" />
+              <h3 class="m-0">Omar Yousry</h3>
+              <span class="c-gray">Level 20</span>
+              <div class="level"></div>
+              <div class="stars d-flex">
+                <i class="fa-solid fa-star c-orange fs-13"></i>
+                <i class="fa-solid fa-star c-orange fs-13"></i>
+                <i class="fa-solid fa-star c-orange fs-13"></i>
+                <i class="fa-solid fa-star c-orange fs-13"></i>
+                <i class="fa-solid fa-star c-orange fs-13"></i>
+              </div>
+              <span class="c-gray fs-13">550 Rating</span>
+            </div>
+            <div class="info w-full">
+              <div class="general">
+                <span class="c-gray fs-15">General Information</span>
+                <div class="mt-10">
+                  <span class="c-gray fs-14"
+                    >Full Name:<span class="c-black"> Omar Yousry</span></span
+                  >
+                  <span class="c-gray fs-14"
+                    >Gender:<span class="c-black"> Male</span></span
+                  >
+                  <span class="c-gray fs-14"
+                    >Country:<span class="c-black"> Egypt</span></span
+                  >
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox" checked />
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="personal">
+                <span class="c-gray fs-15">Personal Information</span>
+                <div class="f-between mt-10">
+                  <span class="c-gray fs-14"
+                    >Email:<span class="c-black">
+                      oamrimr64@gmail.com</span
+                    ></span
+                  >
+                  <span class="c-gray fs-14"
+                    >Phone:<span class="c-black"> 01026046781</span></span
+                  >
+                  <span class="c-gray fs-14"
+                    >Date Of Birth:<span class="c-black"> 7/7/2007</span></span
+                  >
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox" />
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="job">
+                <span class="c-gray fs-15">Job Information</span>
+                <div class="f-between mt-10">
+                  <span class="c-gray fs-14"
+                    >Title:<span class="c-black">
+                      Full Stack Developer</span
+                    ></span
+                  >
+                  <span class="c-gray fs-14">
+                    Programming Language:<span class="c-black">
+                      Javascript</span
+                    ></span
+                  >
+                  <span class="c-gray fs-14">
+                    Years Of Experience:<span class="c-black"> 4+</span></span
+                  >
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox" checked />
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="billing">
+                <span class="c-gray fs-15">Billing Information</span>
+                <div class="f-between mt-10">
+                  <span class="c-gray fs-14"
+                    >Payment Method:<span class="c-black"> Paypal</span></span
+                  >
+                  <span class="c-gray fs-14"
+                    >Email:<span class="c-black">
+                      oamrimr64@gmail.com</span
+                    ></span
+                  >
+                  <span class="c-gray fs-14">
+                    Subscription:<span class="c-black"> Daily+</span></span
+                  >
+                  <label>
+                    <input type="checkbox" class="toggle-checkbox" />
+                    <div class="toggle-switch"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end information -->
+          <!-- start skills -->
+          <div class="p-20 rad-10 bg-white skills"></div>
+          <!-- end skills -->
+          <!-- start activities -->
+          <div class="p-20 rad-10 bg-white activities"></div>
+          <!-- end activities -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

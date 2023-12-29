@@ -3,7 +3,7 @@
 :root {
   --blue-color: #0075ff;
   --blue-alt-color: #0d69d5;
-  --orange-color: #f5930b;
+  --orange-color: #f59e0b;
   --green-color: #22c55e;
   --red-color: #f44336;
   --gray-color: #888;
@@ -56,6 +56,48 @@ ul {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--blue-alt-color);
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-switch {
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ccc;
+  position: relative;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+
+.toggle-switch::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f00d";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  transition: 0.3s;
+  color: #ccc;
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  color: var(--blue-color);
+  left: 50px;
 }
 
 /* end main rules */
@@ -691,48 +733,6 @@ ul {
   border: 1px #ccc solid;
 }
 
-.settings-page .toggle-checkbox {
-  display: none;
-}
-
-.settings-page .toggle-switch {
-  width: 78px;
-  height: 32px;
-  border-radius: 16px;
-  background-color: #ccc;
-  position: relative;
-  transition: 0.3s ease-out;
-  cursor: pointer;
-}
-
-.settings-page .toggle-switch::before {
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  content: "\f00d";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  left: 4px;
-  bottom: 4px;
-  transition: 0.3s;
-  color: #ccc;
-}
-
-.settings-page .toggle-checkbox:checked + .toggle-switch {
-  background-color: var(--blue-color);
-}
-
-.settings-page .toggle-checkbox:checked + .toggle-switch::before {
-  content: "\f00c";
-  color: var(--blue-color);
-  left: 50px;
-}
-
 .settings-page .general-info form div {
   gap: 10px;
 }
@@ -887,6 +887,124 @@ ul {
 }
 
 /* end settings */
+
+/* start profile */
+
+.profile-page {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.profile-page .overview {
+  grid-column: span 3;
+  align-items: center;
+}
+
+.profile-page .overview .avatar {
+  flex-basis: 300px;
+  padding: 20px;
+  gap: 15px;
+  border-right: 1px solid #eee;
+}
+
+.profile-page .overview .avatar img {
+  width: 120px;
+  height: 120px;
+}
+
+.profile-page .overview .avatar .level {
+  background-color: #eee;
+  height: 6px;
+  width: 70%;
+  border-radius: 25px;
+  position: relative;
+}
+
+.profile-page .overview .avatar .level::before {
+  content: "";
+  width: 60%;
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--blue-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.profile-page .overview .avatar .stars i {
+  color: var(--orange-color);
+}
+
+.profile-page .overview .avatar .stars i:not(:last-child) {
+  margin-right: 4px;
+}
+
+.profile-page .overview .info > div {
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.profile-page .overview .info > div:hover {
+  background-color: #f9f9f9;
+}
+
+.profile-page .overview .info > div:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.profile-page .overview .info > div > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px
+}
+
+.profile-page .overview .info .toggle-switch {
+  height: 20px;
+  width: 72px;
+}
+
+.profile-page .overview .info .toggle-switch::before {
+  height: 12px;
+  width: 12px;
+  font-size: 8px;
+}
+
+.profile-page
+  .overview
+  .info
+  .toggle-checkbox:checked
+  + .toggle-switch::before {
+  left: 56px;
+}
+
+@media (max-width: 767px) {
+  .profile-page .overview {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-page .overview .avatar {
+    border: none;
+  }
+
+  .profile-page .overview .info > div {
+    text-align: center;
+  }
+
+  .profile-page .overview .info > div > div {
+    margin-top: 20px;
+  }
+
+  .profile-page .overview .info > div label {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.profile-page .activities {
+  grid-column: span 2;
+}
+
+/* end profile */
 
 /* start animations */
 
