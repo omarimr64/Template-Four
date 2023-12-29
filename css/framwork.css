@@ -48,6 +48,10 @@
   gap: 10px;
 }
 
+.gap-5 {
+  gap: 5px;
+}
+
 .d-block {
   display: block;
 }
