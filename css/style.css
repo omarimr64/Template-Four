@@ -829,6 +829,7 @@ ul {
 .settings-page .backup .time label {
   padding-left: 30px;
   position: relative;
+  cursor: pointer;
 }
 
 .settings-page .backup .time label::before {
