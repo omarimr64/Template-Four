@@ -1185,6 +1185,58 @@ ul {
 
 /* end projects */
 
+/* start courses */
+
+.courses-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .courses-page {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+
+.courses-page .courses-box {
+  overflow: hidden;
+  position: relative;
+}
+
+.courses-page .courses-box .person {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid white;
+  top: 20px;
+  left: 20px;
+}
+
+.courses-page .courses-box img:not(.person) {
+  width: 100%;
+}
+
+.courses-page .courses-box .text p {
+  line-height: 1.5;
+}
+
+.courses-page .courses-box .bottom {
+  position: relative;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.courses-page .courses-box .bottom a {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* end courses */
+
 /* start animations */
 
 @keyframes change-color {
