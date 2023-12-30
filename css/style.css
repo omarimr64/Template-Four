@@ -100,6 +100,34 @@ ul {
   left: 50px;
 }
 
+.level {
+  background-color: #eee;
+  border-radius: 25px;
+  position: relative;
+  max-width: 100%;
+}
+
+.level::before {
+  content: "";
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.level.red::before {
+  background-color: var(--red-color);
+}
+
+.level.green::before {
+  background-color: var(--green-color);
+}
+
+.level.blue::before {
+  background-color: var(--blue-color);
+}
+
 /* end main rules */
 /* start sidebar */
 
@@ -927,22 +955,12 @@ ul {
 }
 
 .profile-page .overview .avatar .level {
-  background-color: #eee;
-  height: 6px;
   width: 70%;
-  border-radius: 25px;
-  position: relative;
+  height: 6px;
 }
 
 .profile-page .overview .avatar .level::before {
-  content: "";
   width: 60%;
-  height: inherit;
-  border-radius: inherit;
-  background-color: var(--blue-color);
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 
 .profile-page .overview .avatar .stars i {
@@ -1068,6 +1086,104 @@ ul {
 }
 
 /* end profile */
+
+/* start projects */
+
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .projects-page {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+
+.projects-page .projects-box {
+  position: relative;
+}
+
+.projects-page .projects-box .date {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+@media (max-width: 320px) {
+  .projects-page .projects-box {
+    text-align: center;
+  }
+
+  .projects-page .projects-box .name {
+    margin-top: 10px;
+    display: block;
+  }
+
+  .projects-page .projects-box .date {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.projects-page .projects-box .team {
+  display: flex;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.projects-page .projects-box .team img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.projects-page .projects-box .team img:hover {
+  z-index: 10;
+}
+
+.projects-page .projects-box .team img:not(:first-child) {
+  margin-left: -15px;
+}
+
+.projects-page .projects-box .skills-box {
+  padding: 15px 0;
+  justify-content: flex-end;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+}
+
+.projects-page .projects-box .bottom {
+  margin-top: 15px;
+  color: var(--gray-color);
+  font-size: 14px;
+}
+
+.projects-page .projects-box .bottom .level {
+  height: 8px;
+  width: 260px;
+}
+
+.projects-page .projects-box .bottom .level::before {
+  width: var(--width);
+}
+
+@media (max-width: 767px) {
+  .projects-page .projects-box .skills-box,
+  .projects-page .projects-box .bottom {
+    flex-direction: column;
+  }
+  .projects-page .projects-box .skills-box span {
+    width: fit-content;
+  }
+
+  .projects-page .projects-box .bottom {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+/* end projects */
 
 /* start animations */
 
