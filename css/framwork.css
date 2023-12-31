@@ -211,6 +211,10 @@
   background-color: var(--blue-color);
 }
 
+.bg-red {
+  background-color: var(--red-color);
+}
+
 .bg-orange {
   background-color: var(--orange-color);
 }
@@ -297,7 +301,7 @@
 }
 
 .btn-shape {
-  padding: 7px 10px;
+  padding: 4px 10px;
   border-radius: 6px;
 }
 
