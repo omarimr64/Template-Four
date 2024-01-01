@@ -1339,6 +1339,141 @@ ul {
 
 /* end friends */
 
+/* start files */
+
+.files-page {
+  align-items: flex-start;
+}
+
+.files-page .statistics {
+  min-width: 260px;
+}
+
+@media (max-width: 767px) {
+  .files-page {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .files-page .statistics {
+    min-width: 200px;
+  }
+}
+
+.files-page .statistics .files-box {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.files-page .statistics .files-box > span {
+  margin-left: auto;
+}
+
+.files-page .statistics .files-box .left i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0 117 255 / 20%);
+  color: var(--blue-color);
+}
+
+.files-page .statistics .files-box:nth-of-type(2) .left i {
+  background-color: rgb(34 197 94 / 20%);
+  color: var(--green-color);
+}
+
+.files-page .statistics .files-box:nth-of-type(3) .left i {
+  background-color: rgb(244 67 54 / 20%);
+  color: var(--red-color);
+}
+
+.files-page .statistics .files-box:nth-of-type(4) .left i {
+  background-color: rgb(245 158 11 / 20%);
+  color: var(--orange-color);
+}
+
+.files-page .statistics .files-box .left .extension {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.files-page .statistics button {
+  border: none;
+  padding: 10px 15px;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  cursor: pointer;
+}
+
+.files-page .statistics button:hover i {
+  animation: top-and-bottom 0.7s ease infinite;
+}
+
+.files-page .statistics button i {
+  margin-right: 10px;
+}
+
+.files-page .files {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .files-page .files {
+    gap: 10px;
+  }
+}
+
+.files-page .files .file-box {
+  position: relative;
+  text-align: center;
+}
+
+.files-page .files .file-box i {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: 0.2s;
+}
+
+.files-page .files .file-box i:hover {
+  color: var(--blue-color);
+}
+
+.files-page .files img {
+  width: 64px;
+  height: 64px;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.files-page .files .type:hover img {
+  transform: rotate(5deg);
+}
+
+.files-page .files span {
+  display: block;
+}
+
+.files-page .files p.name {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.files-page .files .bottom {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* end files */
+
 /* start animations */
 
 @keyframes change-color {
@@ -1348,6 +1483,16 @@ ul {
 
   100% {
     background-color: white;
+  }
+}
+
+@keyframes top-and-bottom {
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
