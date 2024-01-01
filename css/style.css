@@ -262,8 +262,8 @@ ul {
 .content > h1 {
   margin: 20px 20px 40px;
 }
-.content h1::before,
-.content h1::after {
+.content > h1::before,
+.content > h1::after {
   content: "";
   height: 3px;
   position: absolute;
@@ -1473,6 +1473,89 @@ ul {
 }
 
 /* end files */
+
+/* start plans */
+
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.plans-page .plan .pricing {
+  border: 3px solid white;
+  outline: 3px solid var(--green-color);
+  text-align: center;
+}
+
+.plans-page .plan:nth-of-type(2) .pricing {
+  outline-color: var(--blue-color);
+}
+
+.plans-page .plan:nth-of-type(3) .pricing {
+  outline-color: var(--orange-color);
+}
+
+.plans-page .plan .pricing h2 {
+  margin-bottom: 15px;
+}
+
+.plans-page .plan .pricing h1 {
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.plans-page .plan .pricing h1 span {
+  font-size: 25px;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
+.plans-page .plan ul div {
+  border-bottom: 1px solid #eee;
+}
+
+.plans-page .plan ul div i {
+  color: var(--gray-color);
+  cursor: pointer;
+}
+
+.plans-page .plan ul li {
+  padding: 15px 0;
+  font-size: 15px;
+  margin-left: 30px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.plans-page .plan ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: -30px;
+  font-size: 18px;
+}
+
+.plans-page .plan ul li.true::before {
+  content: "\f00c";
+  color: var(--green-color);
+}
+
+.plans-page .plan ul li.false::before {
+  content: "\f00d";
+  color: var(--red-color);
+}
+
+.plans-page .plan a {
+  display: block;
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* end plans */
 
 /* start animations */
 
